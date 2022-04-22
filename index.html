@@ -23,11 +23,14 @@
     console.dir(body);
     
     let div = document.getElementById("div");
+
+    let back = 100;
     
-    div.style.width = "100px";
-    div.style.height = "100px";
+    
+    div.style.width = back+"px";
+    div.style.height = back+"px";
     div.style.backgroundColor = "gray";
-    div.style.borderRadius = "50px";
+    div.style.borderRadius = back/2 +"px";
     div.style.display = ("flex");
     div.style.justifyContent = ("center");
     div.style.alignItems = ("center");
@@ -36,6 +39,21 @@
     
     console.log(div);
     console.dir(div);
+
+    body.addEventListener("click", function(){
+      div.style.width = back*2+"px";
+      div.style.height = back*2+"px";
+      div.style.borderRadius = back +"px";
+
+      if (div.style.width = 200){
+        body.addEventListener("click", function(){
+      div.style.borderRadius = back/2 +"px";
+      div.style.width = back+"px";
+      div.style.height = back+"px";
+        });
+      };
+    });
+    
     
   </script>
   
